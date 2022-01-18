@@ -1,0 +1,30 @@
+package br.com.romanos.marcossa.domain.dto;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.romanos.marcossa.domain.Disciplina;
+
+public class AlunoDTO implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	private String nome;
+	private List<Disciplina> list = new ArrayList<>();
+	
+	public AlunoDTO() {
+		
+	}
+	ß
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public List<Disciplina> getList() {
+		return list;
+	}
+
+}

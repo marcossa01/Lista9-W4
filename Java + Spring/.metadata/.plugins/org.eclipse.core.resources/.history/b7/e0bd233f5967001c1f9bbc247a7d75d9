@@ -1,0 +1,22 @@
+package br.com.romanos.marcossa.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.romanos.marcossa.domain.Aluno;
+
+public class AlunoService {
+	
+	List<Aluno> alunos = new ArrayList<>();
+	
+	public List<Aluno> findAll() {
+		return alunos;
+	}
+	
+	public Aluno insert(Aluno obj) {
+		obj.setId(alunos.size() + 1);
+		alunos.add(obj);
+		return obj;
+	}
+
+}

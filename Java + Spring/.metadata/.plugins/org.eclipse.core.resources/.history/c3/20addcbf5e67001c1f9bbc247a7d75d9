@@ -1,0 +1,20 @@
+package br.com.romanos.marcossa.domain.dto;
+
+public class DisciplinaDTO {
+	
+	private String nome;
+	
+	public DisciplinaDTO() {
+		
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+
+}

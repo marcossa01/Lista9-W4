@@ -1,0 +1,5 @@
+package br.com.romanos.marcossa.domain.dto;
+
+public class AlunoDTO {
+
+}

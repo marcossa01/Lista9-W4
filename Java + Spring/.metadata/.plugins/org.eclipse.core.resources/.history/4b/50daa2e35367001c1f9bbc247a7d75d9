@@ -1,0 +1,46 @@
+package br.com.romanos.marcossa.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Aluno {
+	
+	private Integer id;
+	private String nome;
+	
+	private List<Disciplina> list = new ArrayList<>();
+	
+	public Aluno() {
+		
+	}
+	
+	public Aluno(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getNome() {
+		return this.nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public List<Disciplina> getList() {
+		return this.list;
+	}
+	
+	@Override
+	public String toString() {
+		return "Nome do Aluno: " + nome;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+}

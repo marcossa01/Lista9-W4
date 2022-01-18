@@ -1,0 +1,28 @@
+package br.com.romanos.marcossa.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.romanos.marcossa.domain.Aluno;
+import br.com.romanos.marcossa.domain.dto.AlunoDTO;
+
+public class AlunoService {
+	
+	List<Aluno> alunos = new ArrayList<>();
+	
+	public List<Aluno> findAll() {
+		return alunos;
+	}
+	
+	public Aluno insert(Aluno obj) {
+		obj.setId(alunos.size() + 1);
+		alunos.add(obj);
+		return obj;
+	}
+	
+	public Aluno fromDTO(AlunoDTO objDto) {
+		Aluno aluno = new Aluno(objDto.getNome());
+		return aluno;
+	}
+
+}

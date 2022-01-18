@@ -1,0 +1,18 @@
+package br.com.romanos.demo.resources;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value = "/romanos")
+public class RomanosResource {
+	
+	@GetMapping
+	public ResponseEntity<String> classeTeste() {
+		return ResponseEntity.ok().body("Teste Ok");
+
+	}
+
+}

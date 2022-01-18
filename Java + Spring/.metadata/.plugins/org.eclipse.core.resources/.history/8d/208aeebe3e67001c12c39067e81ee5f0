@@ -1,0 +1,32 @@
+package br.com.romanos.demo.resources;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.romanos.demo.service.RomanosService;
+
+@RestController
+@RequestMapping(value = "/romanos")
+public class RomanosResource {
+	
+	@Autowired
+	private RomanosService romanoService;
+	
+	@GetMapping
+	public ResponseEntity<String> classeTeste() {
+		return ResponseEntity.ok().body("Teste Ok");
+
+	}
+	
+	@GetMapping(value="/{numero}")
+	public ResponseEntity<String> romanos(@PathVariable int number) {
+		String romano = romanoService.romano(number);
+		return ResponseEntity.ok(romano);
+	}
+	
+
+}
